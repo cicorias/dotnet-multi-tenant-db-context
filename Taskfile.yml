@@ -1,0 +1,23 @@
+# https://taskfile.dev
+
+version: '3'
+
+vars:
+  GREETING: Hello, World!
+
+tasks:
+  default:
+    cmds:
+      - task -l
+    silent: true
+
+
+  jwtsimple:
+    cmds:
+      - dotnet user-jwts create -p ./api/webapi.csproj -n userone --role user --claim "scp=access_as_user"
+    silent: true
+
+  jwtlist:
+    cmds:
+      - dotnet user-jwts list -p ./api/webapi.csproj
+    silent: true

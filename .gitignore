@@ -400,3 +400,9 @@ FodyWeavers.xsd
 
 # mono
 .mono
+
+
+# env files
+.env
+.envrc
+
